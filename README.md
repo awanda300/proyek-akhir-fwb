@@ -1,13 +1,13 @@
 <h1 align="center">MindCheck</h1> <br>
 
-<h3 align="center">Sistem Pakar Diagnosa Gangguan Kesehatan Mental Remaja</h3>
+<h3 align="center">Sistem Pakar Diagnosa Gangguan Kesehatan Mental Pada Remaja</h3>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/example-placeholder" alt="Logo" width="200"/>
+  <img src="https://github.com/user-attachments/assets/5f6420c9-3323-46db-b9bf-496420ba850c" alt="Logo" width="200"/>
 </p>
 
 <p align="center">
-  <strong>AINUL HAYAT. H</strong><br/><br/>
-  <strong>D0223317</strong><br/><br/>
+  <strong>Awanda</strong><br/><br/>
+  <strong>D0223338</strong><br/><br/>
   <strong>Framework Web Based</strong><br/><br/>
   <strong>2025</strong>
 </p>
