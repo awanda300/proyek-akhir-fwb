@@ -1,61 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">MindCheck</h1> <br>
 
+<h3 align="center">Sistem Pakar Diagnosa Gangguan Kesehatan Mental Remaja</h3>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://github.com/user-attachments/assets/example-placeholder" alt="Logo" width="200"/>
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>AINUL HAYAT. H</strong><br/><br/>
+  <strong>D0223317</strong><br/><br/>
+  <strong>Framework Web Based</strong><br/><br/>
+  <strong>2025</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h3>Role dan Fitur</h3>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🧑‍⚕️ Admin
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| Fitur                     | Deskripsi                                               |
+| ------------------------- | ------------------------------------------------------- |
+| Kelola data pengguna      | Tambah, edit, hapus akun psikolog dan pengguna          |
+| Kelola basis pengetahuan  | Menambah, edit, dan hapus data gejala dan diagnosa      |
+| Kelola hasil konsultasi   | Melihat dan mengelola hasil diagnosa pengguna           |
+| Manajemen rules           | Mengatur relasi antara gejala dan gangguan mental       |
 
-## Learning Laravel
+## 👩‍⚕️ Psikolog
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Fitur                          | Deskripsi                                                  |
+| ------------------------------ | ---------------------------------------------------------- |
+| Lihat hasil diagnosa pengguna  | Melihat histori diagnosa dari pengguna                     |
+| Evaluasi lanjutan              | Menambah catatan atau rekomendasi terhadap hasil diagnosa  |
+| Umpan balik                    | Memberikan feedback atau rujukan lanjutan                  |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🧑 Remaja (User)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Fitur                              | Deskripsi                                                           |
+| ---------------------------------- | ------------------------------------------------------------------- |
+| Registrasi dan login               | Membuat akun dan masuk ke sistem                                    |
+| Konsultasi (diagnosa mandiri)     | Menjawab pertanyaan / gejala yang dirasakan untuk mendapatkan hasil |
+| Lihat riwayat diagnosa             | Melihat hasil konsultasi sebelumnya                                 |
+| Rekomendasi                        | Mendapatkan saran atau rujukan berdasarkan hasil diagnosa           |
 
-## Laravel Sponsors
+<h3>Tabel-tabel database beserta field dan tipe datanya</h3>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<h3>Tabel Users</h3>
 
-### Premium Partners
+| Kolom       | Tipe      | Keterangan                         |
+| ----------- | --------- | ---------------------------------- |
+| id          | bigint    | Primary key                        |
+| name        | string    | Nama pengguna                      |
+| email       | string    | Email unik                         |
+| password    | string    | Password terenkripsi               |
+| role        | enum      | admin, psikolog, user              |
+| created_at  | timestamp | Waktu dibuat                       |
+| updated_at  | timestamp | Waktu diubah                       |
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+<h3>Tabel Gejalas</h3>
 
-## Contributing
+| Kolom       | Tipe      | Keterangan               |
+| ----------- | --------- | ------------------------ |
+| id          | bigint    | Primary key              |
+| kode        | string    | Kode gejala (misal: G01) |
+| nama        | string    | Nama atau deskripsi gejala |
+| created_at  | timestamp |                          |
+| updated_at  | timestamp |                          |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<h3>Tabel Gangguans</h3>
 
-## Code of Conduct
+| Kolom       | Tipe      | Keterangan                         |
+| ----------- | --------- | ---------------------------------- |
+| id          | bigint    | Primary key                        |
+| kode        | string    | Kode gangguan (misal: D01)         |
+| nama        | string    | Nama gangguan                      |
+| deskripsi   | text      | Penjelasan gangguan                |
+| solusi      | text      | Saran penanganan                   |
+| created_at  | timestamp |                                    |
+| updated_at  | timestamp |                                    |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<h3>Tabel Rules</h3>
 
-## Security Vulnerabilities
+| Kolom        | Tipe    | Keterangan                                       |
+| ------------ | ------- | ------------------------------------------------ |
+| id           | bigint  | Primary key                                      |
+| gangguan_id  | foreign | ID dari tabel gangguans                          |
+| gejala_id    | foreign | ID dari tabel gejalas                            |
+| nilai_cf     | float   | Nilai certainty factor (CF) dari gejala terhadap gangguan |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<h3>Tabel Konsultasis</h3>
 
-## License
+| Kolom        | Tipe      | Keterangan                                    |
+| ------------ | --------- | --------------------------------------------- |
+| id           | bigint    | Primary key                                   |
+| user_id      | foreign   | ID dari pengguna                              |
+| hasil_diagnosa | string  | Nama gangguan hasil diagnosa                  |
+| nilai_cf     | float     | Nilai keyakinan akhir                         |
+| created_at   | timestamp |                                               |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h3>Tabel konsultasi_detail</h3>
+
+| Kolom          | Tipe    | Keterangan                                   |
+| -------------- | ------- | -------------------------------------------- |
+| id             | bigint  | Primary key                                  |
+| konsultasi_id  | foreign | ID dari konsultasi                           |
+| gejala_id      | foreign | Gejala yang dipilih oleh pengguna            |
+| nilai_cf_user  | float   | Nilai keyakinan pengguna terhadap gejala itu |
+
+<h3>Relasi Antar Tabel</h3>
+
+| Tabel Asal  | Tabel Tujuan       | Jenis Relasi | Keterangan                                                              |
+| ----------- | ------------------ | ------------ | ----------------------------------------------------------------------- |
+| users       | user\_profiles     | One to One   | Setiap user memiliki satu profil tambahan (alamat, usia, jenis kelamin) |
+| users       | konsultasis        | One to Many  | Satu user dapat melakukan banyak sesi konsultasi                        |
+| konsultasis | konsultasi\_detail | One to Many  | Satu konsultasi memiliki banyak detail gejala yang dipilih              |
+| gejalas     | konsultasi\_detail | Many to One  | Banyak detail konsultasi bisa merujuk ke satu gejala yang sama          |
+| gangguans   | rules              | One to Many  | Satu gangguan memiliki banyak aturan (rules) gejala                     |
+| gejalas     | rules              | One to Many  | Satu gejala bisa digunakan dalam banyak rules                           |
+| gangguans   | gejalas            | Many to Many | Melalui tabel **rules**, menghubungkan banyak gejala ke banyak gangguan |
+| users       | psikolog\_profiles | One to One   | Psikolog punya data tambahan (spesialisasi, lisensi, pengalaman)        |
+
