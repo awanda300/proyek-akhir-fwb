@@ -1,4 +1,4 @@
-<h1 align="center">MindCheck</h1> <br>
+
 
 <h3 align="center">Sistem Pakar Diagnosa Gangguan Kesehatan Mental Pada Remaja</h3>
 <p align="center">
